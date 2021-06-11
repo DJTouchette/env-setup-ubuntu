@@ -15,6 +15,9 @@ checkout_new_branch() {
 
 # Aliases
 
+# Vim
+alias v="nvim"
+
 # Git
 alias g_recent="git for-each-ref --sort=-committerdate --count=10 --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))' refs/heads/"
 alias g_latest="git branch --sort=-committerdate"
