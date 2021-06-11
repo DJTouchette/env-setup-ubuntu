@@ -7,9 +7,14 @@ cp .zshrc ~/
 
 # NeoVim setup
 source ./setup/neovim.sh
-mkdir -p ~/config/neovim
-rm -f ~/config/neovim/init.vim
-cp ./init.vim ~/.config/neovim
+mkdir -p ~/.config/neovim
+rm -f ~/.config/nvim/init.vim
+cp ./init.vim ~/.config/nvim
+nvim -c ':PlugInstall'
+
+# Tmux conf
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+cp ./.tmux.conf ~/.tmux.conf
 
 # Docker completion
 source ./setup/docker-completion.sh
